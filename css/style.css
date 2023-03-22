@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Josefin+Sans:wght@700&family=Kdam+Thmor+Pro&family=Poppins:wght@600&family=Tilt+Warp&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#040406, #0d0d0f, #0b090a, #101012);
+}
+
+/* NAV-SUPERIOR */
+
+#nav_spr {
+    width: 100%;
+    height: 55px;
+    background: linear-gradient(90deg, #ef5606, #d71738, #c1121f, #780000);
+}
+
+.container_spr {
+    max-width: 1200px;
+    height: 55px;
+    margin: 0 auto;
+    display: flex;  
+    padding: 0px 5px;  
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+}
+
+.sociais {
+    width: 220px;    
+}
+
+.sociais_btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    margin-right: 5px;          
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 3px 10px #242323;
+    background: linear-gradient(45deg,#780000, #d71738, #c1121f, #ef5606);
+}
+
+.sociais_btn:hover {
+    scale: 1.15;
+    box-shadow: 0 0 35px var(--color);
+    background: linear-gradient(45deg,#d71738, #b40876);
+}
+
+.sociais_btn i {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#logo_center {
+    height: 40px;       
+}
+
+.search {
+    width: 215px;
+}
+
+.search input {
+    width: 100%;  
+    height: 25px;  
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0px 2px 8px #242323;   
+    background-image: url('../img/icon-search.png');
+    background-repeat: no-repeat;
+    background-position: 96%;
+}
+
+/* MENU-PRINCIPAL */
+
+header {
+    position: sticky;
+    top: 0;    
+    transition: 0.8s;   
+    background: linear-gradient(90deg, #ef5606, #d71738, #c1121f, #780000);
+}
+
+#navbar {
+    width: 100%;    
+    height: 82px;
+    max-width: 1200px;
+    padding: 0px 21px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+}
+
+#logo {
+    width: 180px;
+    height: 90px; 
+    cursor: pointer;
+}
+
+#navbar .links {
+    display: flex;
+    gap: 30px;    
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#navbar .links a {
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;  
+    color: #fff;    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 18px;    
+    font-weight: bold;   
+    padding: 15px 15px 12px;    
+    font-weight: bold;   
+    border-radius: 25px;    
+    transition: 0.05s;    
+}
+
+#navbar .links a:hover {
+    color: #fff;     
+    box-shadow: 0 0 35px var(--color);
+    border: 2px solid #fff;
+    background: linear-gradient(70deg,#d71738, #b40876);   
+}
+
+#navbar .toggle_btn {
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+#navbar #login a {
+    font-family: 'Josefin Sans', sans-serif;  
+    color: #fff;    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 17px;    
+    font-weight: bold;   
+    padding: 15px 15px 12px;    
+    font-weight: bold;   
+    border-radius: 25px;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    box-shadow: 0 0 8px #242323;
+    background: linear-gradient(70deg,#780000, #d71738, #c1121f, #ef5606); 
+}
+
+#navbar #login a:hover {     
+    color: #fff;     
+    box-shadow: 0 0 35px var(--color);
+    background: linear-gradient(70deg,#d71738, #b40876);   
+}
+
+/* DROPDOWN-MENU */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 90px;
+    width: 295px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 274px;
+}
+
+.dropdown_menu a {
+    font-family: 'Josefin Sans', sans-serif;  
+    color: #fff;    
+    width: 100%;    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 17px;    
+    font-weight: bold; 
+    text-align: center;  
+    padding: 10px 10px 5px;    
+    font-weight: bold;   
+    border-radius: 15px;    
+    transition: 0.5s;
+    box-shadow: 0 0 8px #242323;
+    cursor: pointer;
+    background: linear-gradient(70deg,#780000, #d71738, #c1121f, #ef5606); 
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BANNER */
+
+#banner {
+    max-width: 100%;
+    height: 85.8vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 0px 20px;
+    justify-content: center;        
+    font-size: 25px; 
+    background-image: url('../img/the-batman-banner.jpg');
+    
+    /* overlay */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: color;    
+
+}
+
+.description_1 {
+    max-width: 1200px;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;     
+    text-align: center;     
+    justify-items: center;
+    justify-content: center;
+    padding-top: 380px;
+}
+
+.description_1 h1 {
+    font-size: 50px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.description_1 p {
+    font-size: 25px;
+    letter-spacing: 0.5;
+    line-height: 1.5;
+}
+
+/* PERSONAGENS */
+
+#actor_cards {
+    width: 100%;    
+    justify-content: center;
+    justify-items: center;     
+}
+
+.title_container{
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.title_cards {      
+    padding-top: 15px;
+    font-size: 45px;
+    color: #fff;    
+    letter-spacing: 0.5px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;   
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cards_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 35px 35px;      
+    border-top: 4px solid #ef5606;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);    
+    row-gap: 35px;
+    column-gap: 35px;
+    margin-top: 35px;
+}
+
+.card {
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.95s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;       
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px 10px var(--clr);
+}
+
+.banner_1 {
+    background-image: url('http://www.apocalipsters.com.br/wp-content/uploads/2020/02/the-batman-elenco-estreia-no-brasil.jpg');
+}
+
+.banner_2 {
+    background-image: url('https://i.pinimg.com/564x/d9/ef/92/d9ef921b27851153be8c4cb2aaf7b9b4.jpg');
+}
+
+.banner_3 {
+    background-image: url('https://i.pinimg.com/736x/7a/7b/7d/7a7b7d0bfc201c9783f3027e57276f61.jpg');
+}
+
+.banner_4 {
+    background-image: url('https://i.pinimg.com/564x/ad/91/e0/ad91e02dd874357603d9ba87119d0061.jpg');
+}
+
+.banner_5 {
+    background-image: url('https://i.pinimg.com/564x/55/ba/f3/55baf3b7aa6588ce8a8fcd17e5b9fcfb.jpg');
+}
+
+.banner_6 {
+    background-image: url('https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/69fbe1c4-9efb-11ec-aa6e-9587410378a2/john-turturro.jpg');
+}
+
+/* VÍDEO */
+
+#trailer {
+    width: 100%;
+}
+
+.t_container {
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;     
+}
+
+.title_trailer {      
+    padding-top: 20px;
+    font-size: 45px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center; 
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.vd_container {
+    max-width: 1200px;
+    margin: 0 auto;    
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    border-top: 4px solid #ef5606;    
+}
+
+.video {
+    width: 90%;
+    margin-top: 30px;
+}
+
+.sinopse h2 {
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+.sinopse p {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    margin-top: 25px;
+}
+
+#buy {
+    margin: 40px;
+}
+
+#buy a {
+    font-family: 'Josefin Sans', sans-serif;  
+    color: #fff;    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 17px;    
+    font-weight: bold;
+    padding: 15px 15px 12px;    
+    font-weight: bold;   
+    border-radius: 25px;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    box-shadow: 0 0 8px #242323;
+    background: linear-gradient(70deg,#780000, #d71738, #c1121f, #ef5606); 
+}
+
+#buy a:hover {    
+    color: #fff;     
+    box-shadow: 0 0 35px var(--clor);
+    background: linear-gradient(70deg,#d71738, #b40876);  
+}
+
+/* CONTATO */
+
+#contatos {
+    width: 100%;    
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: 4px solid #fff;
+    background: #040406;
+}
+
+.c_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;    
+}
+
+.contato h1 {    
+    margin-top: 45px;
+    font-size: 45px;
+    color: #fff;    
+    letter-spacing: 0.5px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;    
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#footer_img {
+    width: 250px; 
+    margin-top: 25px; 
+    cursor: pointer;
+}
+
+.footer_btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin: 10px;      
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 35px;    
+    transition: 0.3s;    
+    background: linear-gradient(45deg,#780000, #d71738, #c1121f, #ef5606);
+}
+
+.footer_btn:hover {
+    scale: 1.15;
+    box-shadow: 0 0 10px var(--clr);
+    background: linear-gradient(45deg,#d71738, #b40876);
+}
+
+.footer_btn i {
+    font-size: 30px;
+    text-align: center;    
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 80px;    
+    background: #040406;
+}
+
+.copy {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #fff;
+    text-align: center;    
+}
+
+.copy_text {
+    margin-top: 15px;
+
+}
+
+ .copy span {    
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;  
+ }
+
+ .copy span a {
+    font-weight: bold;
+    color: #d71738;
+ }
+
+
+
+/* RESPONSIVE DESIGNS */
+
+@media(max-width: 992px) {
+    #nav_spr .search,
+    #logo_center,
+    #navbar .links,
+    #login {
+        display: none;
+    }
+
+    #navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }  
+        
+    .cards {        
+        grid-template-columns: repeat(1, 1fr);               
+    }
+    
+    .c_container {     
+        display: inline;   
+        grid-template-columns: 1fr;
+    }    
+}
+
